@@ -4,6 +4,9 @@ module MethodsPracticeHelpers
     # Generate an image tag with the given source and the classes
     # "img-responsive" and "img-thumbnail". The image should also have an alt
     # attribute with the contents of alternate_text.
+		%(
+			<img src="#{source}" class="img-responsive img-thumbnail" alt="#{alternate_text}">			
+		)
   end
 
   def bootstrap_alert(message, type='info')
@@ -12,10 +15,10 @@ module MethodsPracticeHelpers
     # the "message" variable and should have a class appropriate for the "type"
     # that is passed in, defaulting to 'info' if no type is passed in.
 		%(
-		<div class="alert alert-#{type} alert-dismissible" role="alert">
-  		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  		#{message}
-		</div>
+			<div class="alert alert-#{type} alert-dismissible" role="alert">
+	  		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	  		#{message}
+			</div>
 		)
   end
 
